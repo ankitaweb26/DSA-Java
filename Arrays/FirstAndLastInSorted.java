@@ -17,7 +17,7 @@ Auxiliary Space Complexity: O(1), excluding the result array.
 */
 
 class Solution {
-    public int[] find(int arr[], int x) {
+    ArrayList<Integer> find(int arr[], int x) {
         int first = -1;
         int last = -1;
 
@@ -30,6 +30,10 @@ class Solution {
             }
         }
 
-        return new int[]{first, last};
+        ArrayList<Integer> result = new ArrayList<>();
+        result.add(first);
+        result.add(last);
+
+        return result;
     }
 }
